@@ -1,0 +1,100 @@
+
+.App {
+    display: flex;
+    background-color: rgb(10, 10, 10);
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.isi {
+    display:grid;
+    grid-template-areas:
+    "header content"
+    "nav content";
+    grid-template-columns: 1fr 2fr;
+   
+   
+}
+
+.header {
+    grid-area: header;
+    padding: 20px;
+    /* background-color: #1a1a1a; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* border-bottom: 1px solid #333; */
+}
+
+
+
+.cursor {
+    background-color: white ;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    grid-area: nav;
+    /* padding: 20px; */
+    /* background-color: #1a1a1a; */
+   
+}
+
+.nav ul {
+    padding: 30px;
+    gap:10px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.nav a {
+    text-decoration: none;
+    color: #D4D4D4;
+}
+
+.nav a:hover{
+    color:#8B8B8B;
+}
+
+.nav li.active{
+    margin-left: 35%;
+    list-style-type:disc;
+    color: white;
+    text-indent: -9999px;
+}
+
+.frame {
+    width: 96vw; /* Width of the frame */
+    height: 90vh; /* Height of the frame */
+    border: 1px solid  #D4D4D4; /* Border to represent the frame */
+    background-color: #050505;
+   
+}
+
+.container {
+
+    grid-area: content;
+   
+    overflow-y: auto;
+    /* background-color: #1a1a1a; */
+    margin: 30px;
+    align-items:flex-end;
+    
+    display : flex;
+    flex-direction: column;
+}
+

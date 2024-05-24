@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: #D4D4D4;
+    margin: 0;
+    
+  }
+  
+  /* header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align:justify;
+    padding: 30px;
+    
+  
+  } */
+  
+  h1 {
+    font-family: 'Vasquz', serif;
+    font-size: 42pt;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+  
+  p {
+    font-family: Helvetica, sans-serif;
+    font-size: 21pt;
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    
+  
+  }
+  
