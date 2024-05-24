@@ -1,4 +1,11 @@
+*{
+    
+    cursor:none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
+}
 .App {
     display: flex;
     background-color: rgb(10, 10, 10);
@@ -6,17 +13,20 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-
-    
-}
+   
+   
+} 
 
 .isi {
     display:grid;
     grid-template-areas:
     "header content"
-    "nav content";
+    "nav content"
+    "footer content";
     grid-template-columns: 1fr 2fr;
-   
+    grid-template-rows: auto 1fr auto;
+    max-height: 90vh;
+    min-height: 90vh;
    
 }
 
@@ -52,7 +62,7 @@
 }
 
 .nav ul {
-    padding: 30px;
+    padding: 20px;
     gap:10px;
     margin: 0;
     list-style: none;
@@ -91,10 +101,62 @@
    
     overflow-y: auto;
     /* background-color: #1a1a1a; */
-    margin: 30px;
-    align-items:flex-end;
-    
+    margin: 20px;
+   
     display : flex;
     flex-direction: column;
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    text-align:end;
+    align-items:flex-end; 
+    gap: 1rem;
+}
+
+.main p {
+   
+   
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    width: 35rem;
+  
+  }
+
+  .footer {
+    grid-area: footer;    
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+   
+   
+  }
+
+  .footer a:hover{
+    background-color: #8B8B8B;
+  }
+
+
+  .card {
+    /* background:#363636; */
+    border-radius: 25px;
+    padding: 1rem 4rem;
+  
+  }
+  .card:hover{
+    border-radius: 25px;
+    background-color: #161616;  
+  }
+
+  
+  .text p{
+   
+    padding-top: 1rem;
+   
+   
+  }
+
+  
