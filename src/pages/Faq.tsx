@@ -8,7 +8,7 @@ const Faq = () => {
       </p>
       <p>What library do you use?</p>
       <p>
-        I use Emailjs, React-Router, TsParticle, Framer-Motion, and
+        I use GSAP, Emailjs, React-Router, TsParticle, Framer-Motion, and
         Styled-Components.
       </p>
       <p>Why do you use so many library?</p>

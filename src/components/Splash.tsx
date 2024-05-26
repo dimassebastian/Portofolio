@@ -1,59 +1,52 @@
-import React, { useRef, ReactNode, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
+import "./splash.css";
 import gsap from "gsap";
 
-interface Props {
-  children: ReactNode;
-}
-
-const AnimatedSplash: React.FC<Props> = ({ children }) => {
+const Splash: React.FC = () => {
   const comp = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    const t1 = gsap.timeline();
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline();
 
-    t1.from(["#text-1", "#text-2", "#text-3"], {
-      opacity: 0,
-      y: "+=30",
-      stagger: 0.5,
-    })
-      .to(["#text-1", "#text-2", "#text-3"], {
-        opacity: 0,
-        y: "-=30",
-        delay: 0.3,
-        stagger: 0.3,
+      tl.from("#intro-slider", {
+        opacity: 1,
+        duration: 0.8,
       })
-      .to("#intro-slider", {
-        opacity: 0,
-        duration: 1.3,
 
-        onComplete: () => {
-          // After animation completion, remove the component
-          if (comp.current && comp.current.parentNode) {
-            comp.current.parentNode.removeChild(comp.current);
-          }
-        },
-      });
+        .from(["#text-1", "#text-2", "#text-3"], {
+          opacity: 1,
 
-    return () => {
-      // Cleanup function to revert animation when component unmounts
-      t1.kill(); // Stop the animation
-    };
+          stagger: 0.00005,
+        })
+        .to(["#text-1", "#text-2", "#text-3"], {
+          opacity: 0,
+          duration: 0.5,
+          delay: 0.3,
+          stagger: 0.05,
+        })
+        .to(["#intro-slider"], {
+          opacity: 0,
+          duration: 1.3,
+        })
+        .to(["#intro-slider"], {
+          xPercent: "-100",
+        });
+    }, comp);
+
+    return () => ctx.revert();
   }, []);
 
-  return <div ref={comp}>{children}</div>;
-};
-
-const Splash: React.FC = () => {
   return (
-    <AnimatedSplash>
+    <div ref={comp}>
       <div id="intro-slider" className="splash">
         <div className="text-container">
-          <span id="text-1">Dimas</span>
-          <span id="text-2">Sebastian</span>
-          <span id="text-3">Portfolio.</span>
+          <h1 id="text-1">Dimas</h1>
+          <h1 id="text-1">Sebastian</h1>
+          <span id="text-3">Portofolio.</span>
         </div>
       </div>
-    </AnimatedSplash>
+    </div>
   );
 };
 

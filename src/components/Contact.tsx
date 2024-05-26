@@ -65,7 +65,7 @@ const StyledContactForm = styled.div`
   font-size: 16px;
 
   form {
-    display: flex;
+    
     flex-direction: column;
     
     input,

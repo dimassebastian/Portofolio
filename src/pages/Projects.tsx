@@ -9,7 +9,7 @@ const Projects = () => {
       <Card
         title="ON TIME"
         link="https://github.com/dimassebastian"
-        content="ON TIME is a collaborative project developed by a team of five, including myself, designed to streamline personal and group scheduling through a mobile app. The primary function of ON TIME is to help users create detailed to-do lists and efficiently match their schedules with others, making it easier to coordinate and plan activities.
+        content="ON TIME is a collaborative project developed by a team of five, including myself, designed to organize personal activities and group scheduling through a mobile app. The primary function of ON TIME is to help users create detailed to-do lists and efficiently match their schedules with others, making it easier to coordinate and plan activities.
         in this project, i contributed mostly to the back-end development while still playing a role in front-end."
       ></Card>
       <Card

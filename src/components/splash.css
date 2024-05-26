@@ -19,9 +19,17 @@
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    width: 280px;
+    
     font-size:  20px;
     font-weight: 800;
     overflow: hidden;
     color: #D4D4D4;
+    gap: 1rem;
+}
+
+.splash span{
+    padding-top: 5px;
+    margin: 0;
+    font-size: 16pt;
+    font-weight: 100;
 }
