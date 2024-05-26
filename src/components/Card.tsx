@@ -4,6 +4,7 @@ import { ReactNode, useState } from "react";
 interface Props {
   title?: ReactNode;
   content?: ReactNode;
+  link?: string;
   [key: string]: any;
 }
 const Card: React.FC<Props> = (props) => {
@@ -11,7 +12,7 @@ const Card: React.FC<Props> = (props) => {
 
   return (
     <motion.div
-      transition={{ layout: { duration: 0.5, type: "spring" } }}
+      transition={{ layout: { duration: 0.2, type: "spring" } }}
       layout
       onClick={() => setIsOpen(!isOpen)}
       className="card"
@@ -20,6 +21,13 @@ const Card: React.FC<Props> = (props) => {
       {isOpen && (
         <motion.div className="text">
           <p>{props.content}</p>
+          <a
+            href="https://github.com/dimassebastian"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repository: {props.link}
+          </a>
         </motion.div>
       )}
     </motion.div>

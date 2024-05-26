@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.4.0",
     "framer-motion": "^11.2.4",
+    "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
     "react-tsparticles": "^2.12.2",
+    "styled-components": "^6.1.11",
     "tsparticles": "^3.4.0"
   },
   "devDependencies": {

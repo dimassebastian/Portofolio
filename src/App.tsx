@@ -9,14 +9,14 @@ import Faq from "./pages/Faq";
 import { Route, Routes } from "react-router-dom";
 import github from "./assets/github.svg";
 import instagram from "./assets/instagram.svg";
+import Splash from "./components/Splash";
 
-//import "bootstrap/dist/css/bootstrap.css";
 function App() {
   return (
     <div className="App">
+      <Splash />
       <div className="frame">
         <div className="isi">
-          <Design></Design>
           <header className="header">
             <Header></Header>
           </header>
@@ -24,11 +24,15 @@ function App() {
             <Navbar></Navbar>
           </nav>
           <footer className="footer">
-            <a href="#">
-              <img src={github} alt="icon 1" />
+            <a
+              href="https://github.com/dimassebastian"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={github} alt="github" />
             </a>
-            <a href="#">
-              <img src={instagram} alt="icon 2" />
+            <a href="https://www.instagram.com/dimassebastiandev/">
+              <img src={instagram} alt="instagram" />
             </a>
           </footer>
           <div className="container">
@@ -39,6 +43,7 @@ function App() {
               <Route path="/Faq" element={<Faq />}></Route>
             </Routes>
           </div>
+          <Design></Design>
         </div>
       </div>
     </div>
