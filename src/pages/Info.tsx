@@ -12,7 +12,7 @@ const Info = () => {
         Got a question, a fun idea, or just want to say hi? I'm here for it!
         Reach out and let's connect.
       </p>
-      <p>Whatsapp : 08116537491</p>
+      <p>Instagram: dimassebastiandev</p>
       <p>Email : dimassebastianadi@gmail.com</p>
     </main>
   );
